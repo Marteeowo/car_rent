@@ -1,5 +1,16 @@
+<?php
+    session_start(); 
+
+if (!isset($_SESSION['tuvastamine'])) {
+  header('Location: login.php');
+  exit();
+  }
+
+?>
+
 <?php include('../config.php'); ?>
 <?php include('../header.php'); ?>
+<a href="logout.php" class="btn btn-danger">Log out</a>
 
 <!-- sisu -->
 <div class="container">
